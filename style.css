@@ -1,3 +1,10 @@
+:root {
+    --brand-red: #d4000d;
+    --dark-carbon: #111111;
+    --main-bg: #181818;
+    --white: #ffffff;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 @font-face {
@@ -6,70 +13,124 @@
          url(Polices/FerrariSans.woff) format('woff');
 }
 
-
-
 body {
-    font-family: 'FerrariSans', sans-serif;
-    background-color: #181818;
-    color: #fff;
+    font-family: 'FerrariSans', 'Roboto', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--white);
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
+/* NAVIGATION */
 ul.navbar {
     list-style-type: none;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 0;
-    background-color: #333;
-    font-family: Univers, sans-serif;
+    background-color: var(--dark-carbon);
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    border-bottom: 2px solid var(--brand-red);
 }
 
 ul.navbar li a {
-    color: #d4000d;
+    color: var(--white);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 ul.navbar li a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: var(--brand-red);
+}
+
+header {
+    text-align: center;
+    background-color: var(--dark-carbon);
+    padding-bottom: 20px;
+}
+
+.logo-car {
+    margin-top: 20px;
+}
+
+/* SECTION DESCRIPTION (Image en fond) */
+main {
+    background-image: url('images/812\ CompetA\ avant.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+main p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.mechanics-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mechanics-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.engine-image {
+    flex: 1;
+}
+
+.engine-text {
+    flex: 1;
 }
 
 .car-image {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* TITRES */
+h2 {
+    color: var(--brand-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 4px solid var(--brand-red);
+    padding-left: 15px;
+    margin-bottom: 30px;
 }
 
-header h1 {
-    text-align: center;
-    padding: 20px;
+/* LISTES CARACTÉRISTIQUES */
+ul {
+    list-style: none;
+    padding: 0;
 }
 
+li {
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+    .mechanics-container {
+        flex-direction: column;
+    }
+
     ul.navbar {
         flex-direction: column;
-        align-items: center;
     }
 
-    ul.navbar li {
-        width: 100%;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 1.5rem;
+    header h1 {
+        font-size: 1.8rem;
     }
 }
