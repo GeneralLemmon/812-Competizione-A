@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+    font-family: FerrariSans;
+    src: url(Polices/FerrariSans.woff2) format('woff2'),
+         url(Polices/FerrariSans.woff) format('woff');
+}
+
+ul.navbar {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  font-family: Univers, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+ul.navbar li a {
+  color: #d4000d;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+ul.navbar li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+body{
+    font-family: 'FerrariSans', sans-serif;
+    background-color: #181818;
+    color : #fff;
+    margin: 0;
+}
